@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Proposal Greeting Card</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: #f5e7e4; /* Updated background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('imagebg.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #greeting-card {
+            background-color: rgba(146, 26, 216, 0.9); /* Slightly transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            text-align: center;
+            overflow: hidden; /* Hides the content initially */
+        }
+
+        h1 {
+            color: #e44d26;
+            font-family:cursive;
+        }
+
+        p {
+            color: #333;
+            font-size: 14px; /* Smaller font size */
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: cursive;
+            max-height: 200px; /* Maximum height for the scrollbar */
+            overflow-y: auto; /* Enable vertical scrollbar */
+        }
+
+        button {
+            background-color: #e44d26;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #42c61a;
+        }
+
+        #accept-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="greeting-card">
+        <h1>My Love,</h1>
+        <p id="proposal-text" style="display: none;">
+            <!-- Your lengthy proposal goes here -->
+            In the quiet spaces between heartbeats, where emotions dance like the flickering flames of a candle, I stand before you today, laying bare the depths of my soul. Every shared sunrise and every whispered goodnight has become a verse in the poem of our love. The symphony of laughter, the comfort of your presence, and the silent understanding that bridges the gaps in our words—all are notes in the melody that plays in my heart, a melody composed solely for you.
+
+            As the sun sets, casting a warm glow upon our shared journey, I find myself reaching a pivotal moment—one where love transforms from a feeling to a promise, a commitment that transcends the boundaries of time. The love that I feel for you is a tapestry woven with threads of unwavering support, shared dreams, and the beauty found in your eyes—the windows to a world where our souls intertwine.
+
+            Today, my love, I extend this proposal not merely as a question but as a declaration of my desire to intertwine our destinies further. I long for a future where we face the world hand in hand, where your laughter continues to be the sweetest melody in my ears, and where each shared glance speaks volumes, carrying the weight of a thousand unspoken promises.
+
+            Accepting this proposal isn't just about saying "yes"; it's an embrace of a journey where we navigate life's twists and turns together, where our love becomes the anchor that steadies us through the storms. I see a lifetime of shared sunsets, stolen kisses, and a love that deepens with the passing of each day. My heart, with all its vulnerabilities, stands before you, and I ask with utmost sincerity, will you be the one to share this extraordinary journey with me? Will you accept my proposal, and in doing so, make my dreams of a forever with you come true?
+        </p>
+        <button onclick="revealProposal()">Read Proposal</button>
+        <button id="accept-btn" onclick="acceptProposal()" style="display: none;">Accept Proposal</button>
+    </div>
+
+    <script>
+        function revealProposal() {
+            var proposalText = document.getElementById('proposal-text');
+            var button = document.querySelector('button');
+            var acceptButton = document.getElementById('accept-btn');
+            proposalText.style.display = 'block';
+            button.style.display = 'none';
+            acceptButton.style.display = 'block';
+        }
+
+        function acceptProposal() {
+            alertWithColor('Thank you for accepting my proposal, my love!', '#4CAF50'); // Green color
+        }
+
+        function alertWithColor(message, color) {
+            var alertBox = document.createElement('div');
+            alertBox.style.backgroundColor = color;
+            alertBox.style.color = '#fff';
+            alertBox.style.padding = '10px';
+            alertBox.style.borderRadius = '5px';
+            alertBox.style.marginTop = '20px';
+            alertBox.style.textAlign = 'center';
+            alertBox.innerHTML = message;
+            document.body.appendChild(alertBox);
+            setTimeout(function () {
+                alertBox.style.display = 'none';
+            }, 3000); // Hide after 3 seconds
+        }
+    </script>
+
+</body>
+
+</html>
