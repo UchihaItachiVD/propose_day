@@ -68,6 +68,18 @@
             cursor: pointer;
             border-radius: 5px;
             display: none; /* Initially hidden */
+
+            /* Media query for responsiveness */
+        @media (max-width: 600px) {
+            body {
+                background-image: url('your-mobile-background-image.jpg'); /* Replace with your mobile image path */
+                background-position: center center; /* Adjusted background position for mobile */
+            }
+
+            #greeting-card {
+                max-width: 100%; /* Full width for mobile */
+            }
+        }
         }
     </style>
 </head>
