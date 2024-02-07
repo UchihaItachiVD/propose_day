@@ -15,7 +15,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('image.jpg'); /* Replace with your image path */
+            background-image: url('imagebg.jpg'); /* Replace with your image path */
             background-size: cover;
            background-position:center inherit;
         }
@@ -70,7 +70,7 @@
             display: none; /* Initially hidden */
 
             /* Media query for responsiveness */
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
             body {
                 background-image: url('imagebg.jpg'); /* Replace with your mobile image path */
                 /*background-position: center center;  Adjusted background position for mobile */
@@ -82,22 +82,22 @@
         }
         }
 
-        @media (max-width: 300px) {
+        @media (min-width: 300px) {
             body {
-                background-image: url('imagebg.jpg'); /* Replace with your mobile image path */
+                background-image: url('image.jpg'); /* Replace with your mobile image path */
               /*  background-position: center center;  Adjusted background position for mobile */
             }
         }
 
-        @media (max-width: 200px) {
+        @media (min-width: 200px) {
             body {
-                background-image: url('imagebg.jpg'); /* Replace with your mobile image path */
+                background-image: url('image.jpg'); /* Replace with your mobile image path */
                 
             }
         }
-@media (max-width: 100px) {
+@media (min-width: 100px) {
             body {
-                background-image: url('imagebg.jpg'); /* Replace with your mobile image path */
+                background-image: url('image.jpg'); /* Replace with your mobile image path */
                
             }
         }
